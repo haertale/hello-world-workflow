@@ -12,6 +12,6 @@ jobs:
         uses: haertale/hello-world-composite-action@v5
         with:
           who-to-greet: 'Alexander the Great'
-          file: path/to/some/file.txt
+          some-file: path/to/some/file.txt
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash

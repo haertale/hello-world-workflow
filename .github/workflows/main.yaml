@@ -6,9 +6,12 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v3
+      - run: touch path/to/some/file.txt
+        shell: bash
       - id: foo
-        uses: haertale/hello-world-composite-action@v3
+        uses: haertale/hello-world-composite-action@latest
         with:
           who-to-greet: 'Alexander the Great'
+          file: path/to/some/file.txt
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
